@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homero Simpson</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Todo sobre Homero</h1>
+    <p>Homero Simpson es un personaje ficticio de la serie animada "Los Simpson". Es el padre de la familia Simpson y trabaja en la planta nuclear de Springfield. Es conocido por su amor por la comida, su trabajo en la planta nuclear y su tendencia a cometer errores.</p>
+    <img src="homero.jpg" alt="Homero Simpson" width="300">
+    <p>Homero y la familia Simpson fuerono creados por Matt Groening en 1987. Fueron creados como una parodia de las familias estadounidenses típicas y para romper la ilusión de la vida familiar perfecta que presentaban los programas de televisión de la época.</p>
+        <audio id="miSonido" src="homero.mp3"></audio>
+    <img src="homeros.jpg"
+         onclick="reproducirSonido()" 
+         style="cursor: pointer; width: 300px;">
+
+    <script>
+        function reproducirSonido() {
+            var sonido = document.getElementById("miSonido");
+            sonido.currentTime = 0; // Reinicia el audio si vuelven a tocar la imagen rápido
+            sonido.play();
+        }
+    </script>
+    <div class="homer-juego">
+  <h2>¡El rincón de Homero!</h2>
+  <p id="frase">¡Mmm... donas!</p>
+  <button onclick="fraseHomer()">¡Haz hablar a Homero!</button>
+</div>
+
+<style>
+.homer-juego {
+  background: rgba(30, 30, 30, 0.85);
+  color: rgb(0, 0, 0);
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 18px;
+  text-align: center;
+}
+.homer-juego button {
+  background: #ffdf00;
+  color: #222;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.homer-juego button:hover {
+  background: #ffb700;
+  transform: scale(1.04);
+}
+</style>
+
+<script>
+const frases = [
+  "¡D'oh!",
+  "¡Mmm... donas!",
+  "¡Woo-hoo!",
+  "¡Qué excelente idea!",
+  "No tengo que pensar... ¡tengo cerveza!"
+];
+
+let total = 0;
+
+function fraseHomer() {
+  const i = Math.floor(Math.random() * frases.length);
+  document.getElementById("frase").textContent = frases[i];
+  total++;
+}
+</script>
+</body>
+</html>

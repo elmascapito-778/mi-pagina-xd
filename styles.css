@@ -1,0 +1,35 @@
+body {
+    background-image: url('fondo.jpg'); /* Cambia 'unnamed.jpg' por la ruta de tu imagen */   
+    background-size: cover;          /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;    /* Evita que la imagen se multiplique */
+    background-position: center;     /* Centra la imagen */
+    height: 45vh;                   /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0;
+        font-family: 'Times New Roman', serif;
+  }
+  
+  h1 {
+    color: #ffdf00;
+    font-size: 38px;
+    text-shadow: 2px 3px 5px #000;
+    margin: 0;
+    padding: 24px 12px;
+    text-align: center;      
+    font-size: 600%;        /* Centra el texto */
+  }
+
+  p {                    /* Cambia el color del texto a blanco */
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 20px;
+    background: rgb(254, 254, 255);
+    border-radius: 14px;
+    font-size: 20px;
+    line-height: 1.7;           /* Ajusta el tamaño del texto */
+  }
+
+  img {
+    display: block;                  /* Hace que la imagen sea un bloque */
+    margin: 20px auto;               /* Centra la imagen horizontalmente */
+    border-radius: 10px;             /* Opcional: agrega bordes redondeados a la imagen */
+  }
